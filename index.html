@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Min portfolio - Slutexamination</title>
+  <meta name="description" content="Min portfolio som visar mina kunskaper i webbutveckling 1.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Välkommen till min portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#projekt">Projekt</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="start">
+      <h2>Om mig</h2>
+      <p>Hej! Jag heter <strong>Yussra Elamari</strong> och det här är mitt slutprojekt i kursen Webbutveckling 1.</p>
+      <p>Jag har byggt denna webbplats för att visa mina kunskaper i semantisk HTML, CSS Grid, Flexbox och responsiv design.</p>
+    </section>
+
+    <section id="projekt">
+      <h2>Mina projekt</h2>
+
+     <!-- Bildspel pörjar här--> 
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="bilder/projekt1.jpg" alt="Projekt 1">
+        </div>
+        <div class="slide fade">
+          <img src="bilder/projekt2.jpg" alt="Projekt 2">
+        </div>
+        <div class="slide fade">
+          <img src="bilder/projekt3.jpg" alt="Projekt 3">
+        </div>
+      </div>
+      <!-- 🔹 Bildspel slutar här -->
+
+      <div class="projekt-container">
+        <article>
+          <img src="bilder/projekt1.jpg" alt="Projekt 1">
+          <h3>Projekt 1 – Enkel hemsida</h3>
+        </article>
+
+        <article>
+          <img src="bilder/projekt2.jpg" alt="Projekt 2">
+          <h3>Projekt 2 – CSS layout</h3>
+        </article>
+
+        <article>
+          <img src="bilder/projekt3.jpg" alt="Projekt 3">
+          <h3>Projekt 3 – Responsiv design</h3>
+        </article>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>Mejla mig: <a href="mailto:yussraelamari@example.com">yussraelamari@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Yussra Elamari | Webbutveckling 1</p>
+  </footer>
+
+  <!-- 🔹 Script för bildspel -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // byt bild var 3:e sekund
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
